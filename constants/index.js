@@ -16,6 +16,7 @@ import VegetarianIMG from '../assets/images/food_12.png'
 import ShrimIMG from '../assets/images/food_13.png'
 import ChickenIMG from '../assets/images/food_14.png'
 
+
 export const adsContent = [
     {
         title: 'Choose Your Favorite Food',
@@ -96,3 +97,21 @@ export const foods = [
     //     image: ChickenIMG
     // },
 ]
+
+export const foodsAds = [
+    {
+        title: "Let\'s Tray",
+        body: "Find recipes based on what you already have at home",
+        imgUrl: FirstSlide,
+    },
+    {
+        title: "Let\'s Tray",
+        body: "Find recipes based on what you already have at home",
+        imgUrl: FirstSlide,
+    },
+    {
+        title: "Let\'s Tray",
+        body: "Find recipes based on what you already have at home",
+        imgUrl: FirstSlide,
+    },
+];

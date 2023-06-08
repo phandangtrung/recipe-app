@@ -1,35 +1,54 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
+const SLIDER_WIDTH = Dimensions.get('window').width
+const ITEM_WIDTH = Dimensions.get('window').width - 100
 
-const foodWrapper = {
-    flexDirection: 'row',
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-    backgroundColor: '#e7edf0',
-    padding: 15,
-    borderRadius: '15%',
-    borderWidth: 1,
-    borderColor: 'transparent',
-    margin: 10,
-    shadowColor: '#171717',
-    shadowOffset: { width: -2, height: 4 },
-    shadowOpacity: 0.2,
-    shadowRadius: 3,
-}
-
-export const foodTagStyles = StyleSheet.create({
-    wrapper: {
-        ...foodWrapper
+export const adsStyles = StyleSheet.create({
+    container: {
+        backgroundColor: '#81bab4',
+        flexDirection: 'row',
+        marginBottom: 5,
+        justifyContent: 'space-between',
+        borderRadius: 20,
+        height: 150,
+        width: ITEM_WIDTH,
+        padding: 20,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.29,
+        shadowRadius: 4.65,
+        elevation: 7,
     },
-    wrapperActived: {
-        ...foodWrapper,
-        backgroundColor: '#ffffff',
-        borderColor: '#81BAB4'
+    textContain: {
+        width: '55%',
+        height: '100%',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
+    },
+    body: {
+        color: '#f6f9f9',
+        fontSize: 15,
+        lineHeight: 25
+    },
+    actionContain: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    action: {
+        color: '#fbd17f',
+        marginRight: 5,
+        fontSize: 20,
+        fontWeight: 500,
+    },
+    arrowIcon: {
+        width: 20,
+        height: 10
     },
     image: {
-        width: 30,
-        height: 30,
-        borderRadius: 10,
-        marginRight: 10,
+        width: "40%",
+        height: '100%'
     }
 })

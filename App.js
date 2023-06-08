@@ -39,7 +39,7 @@ export default function App() {
     <View style={globalStyled.wrapper} onLayout={onLayoutRootView}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="AdsSlide" options={{ headerShown: false }} component={AdsSlide} />
+          <Stack.Screen name="AdsSlide" options={{ headerShown: false }} component={Home} />
           <Stack.Screen name="Banner" options={{ headerShown: false }} component={Banner} /> 
           <Stack.Screen name="Login" options={{ headerShown: false }} component={Login} />
           <Stack.Screen name="SignUp" options={{ headerShown: false }} component={SignUp} />

@@ -19,7 +19,7 @@ export const homeStyles = StyleSheet.create({
     avatar: {
         width: 45,
         height: 45,
-        borderRadius: '50%',
+        borderRadius: 200,
         marginRight: 10
     },
     menuIcon: {

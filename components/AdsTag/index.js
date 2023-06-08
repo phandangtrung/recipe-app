@@ -1,23 +1,29 @@
-import { useState } from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
-import { foodTagStyles } from './styled';
+import React from 'react'
+import { Image, Text, View } from "react-native"
+import { adsStyles } from './styled'
+import ArrowIcon from '../../assets/icon/arrow-icon.png'
 
-const FoodTag = (props) => {
-    const { name, imageSrc, handleFoodPicked = () => {} } = props;
-    const [isActived, setIsActived] = useState(false);
 
-    const handleToggleFood = () => {
-        const toggled = !isActived;
-        setIsActived(toggled);
-        handleFoodPicked(toggled);
-    }
-
-    return (
-        <TouchableOpacity onPress={handleToggleFood} style={isActived ? foodTagStyles.wrapperActived : foodTagStyles.wrapper}>
-            <Image source={imageSrc} style={foodTagStyles.image} />
-            <Text>{name}</Text>
-        </TouchableOpacity>
-    );
+const AdsTag = ({ item, index }) => {
+  return (
+    <View style={adsStyles.container} key={index}>
+      <View style={adsStyles.textContain}>
+        <Text style={adsStyles.body}>{item.body}</Text>
+        <View style={adsStyles.actionContain}>
+          <Text style={adsStyles.action}>
+            {item.title}
+          </Text>
+          <Image style={adsStyles.arrowIcon} source={ArrowIcon} />
+        </View>
+      </View>
+      <Image
+        source={item.imgUrl}
+        style={adsStyles.image}
+      />
+    </View>
+  )
 }
 
-export default FoodTag;
+
+
+export default AdsTag
